@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>New Event</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label stacked>Complaint</ion-label>
+    <ion-input [(ngModel)]="text.ComplaintName" type="text" placeholder="What's your complaint?">
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Phone number</ion-label>
+    <ion-input [(ngModel)]="text.PhoneNumber" type="number" placeholder="Your phone number">
+    </ion-input>
+  </ion-item>
+  <!--
+    <ion-item>
+      <ion-label stacked>Cost</ion-label>
+      <ion-input [(ngModel)]="eventCost" type="number" placeholder="How much are you spending?">
+      </ion-input>
+    </ion-item>-->
+
+  <ion-item>
+    <ion-label>Complaint Date</ion-label>
+    <ion-datetime displayFormat="D MMM, YY" pickerFormat="DD MMM YYYY" [(ngModel)]="text.eventDate">
+    </ion-datetime>
+  </ion-item>
+
+  <button ion-button block (click)="sendTextMessage(text);createEvent(text);">
+    Submit
+  </button>
+</ion-content>

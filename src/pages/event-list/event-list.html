@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Reports</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let event of eventList" >
+      <h2>{{event?.name}}</h2>
+
+      <p>Date:
+        <strong>{{event?.date}}</strong>
+      </p>
+    </ion-item>
+  </ion-list>
+</ion-content>
